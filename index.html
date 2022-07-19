@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TypeWriter</title>
+</head>
+<body>
+
+<style>
+  body {
+    background: #ffffff;
+  }
+
+  h1 {
+    max-width: 480px;
+    text-align: center;
+    margin: 60px auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+  }
+
+  h1::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  :root {
+    --blue: #4284f4;
+    --red: #eb4236;
+    --yellow: #fcbc05;
+    --green: #34a854;
+  
+    --size: 1rem;
+    
+  }
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+  }
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    c
+  }
+  .google-loader {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--size);
+    transform: translateY(-50%);
+  }
+  
+  .dot {
+    background-color: grey;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+  }
+  .dot {
+    animation: ani 1s ease-in-out infinite alternate forwards;
+  }
+  
+  .blue {
+    background-color: var(--blue);
+    animation-delay: 0.2s;
+  }
+  .red {
+    background-color: var(--red);
+    animation-delay: 0.4s;
+  }
+  .yellow {
+    background-color: var(--yellow);
+    animation-delay: 0.6s;
+  }
+  .green {
+    background-color: var(--green);
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes ani {
+    to {
+      transform: translateY(1rem);
+    }
+  }
+  
+</style>
+
+<center><h1>Portfólio Victor Sales</h1></center>
+
+
+  <div class="google-loader">
+
+    <center><div class="dot blue"></div></center>
+    <center><div class="dot red"></div></center>
+    <center><div class="dot yellow"></div></center>
+    <center><div class="dot green"></div></center>
+  </div>
+<script>
+  function typeWriter(elemento) {
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+      setTimeout(() => elemento.innerHTML += letra, 120 * i);
+    });
+  }
+
+  // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
+  // function typeWriter(elemento) {
+  //   const textoArray = elemento.innerHTML.split('');
+  //   elemento.innerHTML = '';
+  //   for(let i = 0; i < textoArray.length; i++) {
+  //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
+  //   }
+  // }
+
+  const titulo = document.querySelector('h1');
+  typeWriter(titulo);
+</script>
+  <div class="wrapper">
+    <div class="blue ball"></div>
+    <div class="red ball"></div>  
+    <div class="yellow ball"></div>  
+    <div class="green ball"></div>  
+  </div>
+  <center><div class="wrapper">
+    <div class="blue ball">
+    <div class="red ball">
+    <div class="yellow ball">
+    <div class="green ball">
+  </div>
+</center>
+  <center><div class="redes">
+      <a href="https://www.linkedin.com/in/victor-sales-de-oliveria-79474930/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+      <a href = "mailto:vsales85@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+      <a href="https://instagram.com/vsales_85" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+      <a href="https://www.twitch.tv/vsales85" target="_blank"><img src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white" target="_blank"></a>
+    </div>
+    </center
+</body>
+</html>
